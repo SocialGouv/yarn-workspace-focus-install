@@ -15,7 +15,7 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ESNext",
-    "types": ["dotenv", "jest", "node"]
+    "types": ["jest", "node"]
   },
   "exclude": ["bin", "lib"]
 }
