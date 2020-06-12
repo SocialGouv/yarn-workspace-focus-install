@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/SocialGouv/yarn-workspace-focus-install/workflows/ci/"><img src="https://github.com/SocialGouv/yarn-workspace-focus-install/workflows/ci/badge.svg" alt="Github Master CI Status"></a>
+  <a href="https://github.com/SocialGouv/yarn-workspace-focus-install/actions/"><img src="https://github.com/SocialGouv/yarn-workspace-focus-install/workflows/ci/badge.svg" alt="Github Master CI Status"></a>
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" alt="License: Apache-2.0"></a>
   <a href="https://www.npmjs.com/package/@socialgouv/yarn-workspace-focus-install"><img src="https://img.shields.io/npm/v/@socialgouv/yarn-workspace-focus-install.svg" alt="Npm version"></a>
   <a href="https://codecov.io/gh/SocialGouv/yarn-workspace-focus-install"><img src="https://codecov.io/gh/SocialGouv/yarn-workspace-focus-install/branch/master/graph/badge.svg" alt="codecov"></a>
