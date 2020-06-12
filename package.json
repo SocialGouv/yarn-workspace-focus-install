@@ -1,0 +1,59 @@
+{
+  "name": "@socialgouv/yarn-workspace-focus-install",
+  "description": "Install one and only workspace",
+  "version": "0.0.0",
+  "author": "Fabrique numérique des Ministères Sociaux <dsi-incubateur@sg.social.gouv.fr> (https://incubateur.social.gouv.fr)",
+  "bugs": "https://github.com/SocialGouv/yarn-workspace-focus-install/issues",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@kosko/env": "^0.5.2",
+    "@socialgouv/eslint-config-recommended": "^1.0.0-beta.4",
+    "@socialgouv/eslint-config-typescript": "^1.0.0-beta.4",
+    "@socialgouv/yarn-workspace-focus-install": "link:./src",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.1",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^7.1.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "execa": "^4.0.2",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.6",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "homepage": "https://github.com/SocialGouv/yarn-workspace-focus-install#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": " yarn lint && yarn typecheck && yarn test && yarn build && yarn e2e"
+    }
+  },
+  "keywords": [],
+  "license": "Apache-2.0",
+  "lint-staged": {
+    "*.{j,t}s": [
+      "eslint --fix",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/SocialGouv/yarn-workspace-focus-install.git",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "e2e": "jest -c ./e2e/jest.config.js",
+    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest",
+    "typecheck": "tsc"
+  }
+}

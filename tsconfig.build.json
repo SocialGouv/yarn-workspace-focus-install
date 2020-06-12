@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "lib",
+    "rootDir": "src",
+    "sourceMap": true
+  },
+  "include": ["src"],
+  "exclude": ["**/*.test.ts"]
+}
