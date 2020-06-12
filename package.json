@@ -6,8 +6,8 @@
   "bugs": "https://github.com/SocialGouv/yarn-workspace-focus-install/issues",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.10.1",
-    "@babel/preset-env": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
     "@babel/preset-typescript": "^7.10.1",
     "@kosko/env": "^0.5.2",
     "@socialgouv/eslint-config-recommended": "^1.0.0-beta.4",
