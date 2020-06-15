@@ -1,13 +1,16 @@
+import Debug from "debug";
+
 import { uniqueUnion } from "../utils";
-import { debug } from "../workspaces";
 import { Workspace } from "./types";
+
+const debug = Debug("yarn-workspace-focus-install:workspace:listDependencies");
 
 export function listDependencies(
   workspaces: Record<string, Workspace>,
   name: string,
   dependencies = new Set<string>()
 ): Set<string> {
-  debug("listInternalWorkspaceDependencies", {
+  debug({
     dependencies,
     name,
     workspaces,

@@ -5,18 +5,18 @@ import assert from "assert";
 import Debug from "debug";
 import findWorkspaceRoot from "find-yarn-workspace-root";
 import { remove } from "fs-extra";
-import { normalize, relative } from "path";
+import { join, normalize, relative } from "path";
 import slash from "slash";
 import { directory } from "tempy";
 
 import { cloneFolders } from "./fs/clone";
 import { removeAllDependencies } from "./pkg/removeAllDependencies";
+import { removeKeys } from "./pkg/removeKeys";
 import { removeAllNodeModules, transferAllNodeModules } from "./workspaces";
-import { getFocusPackageNameFromLocation } from "./workspaces/getPackageNameFromLocation";
 import { mapLocations } from "./workspaces/mapLocations";
-import { removeUnnecessaryDependencies } from "./workspaces/removeUnnecessaryWorkspaces";
-import { removeWorkspacesDevDependencies } from "./workspaces/removeWorkspacesDevDependencies";
+import { nameFromLocation } from "./workspaces/nameFromLocation";
 import { Workspace } from "./workspaces/types";
+import { unnecessaryDependencies } from "./workspaces/unnecessaryDependencies";
 import { getWorkspaces, yarnInstall } from "./yarn";
 
 export const debug = Debug("yarn-workspace-focus-install:install");
@@ -37,19 +37,27 @@ export async function focusInstall({
   const workspaces = await getWorkspaces();
 
   const pkgLocation = slash(normalize(relative(workspaceRoot, cwd)));
-  const focusPkgName = getFocusPackageNameFromLocation(workspaces, pkgLocation);
+  const focusPkgName = nameFromLocation(workspaces, pkgLocation);
   debug({ focusPkgName, pkgLocation });
 
   const tmp = await initializeTmpClone(workspaceRoot, workspaces);
 
-  await removeUnnecessaryDependencies(tmp, workspaces, pkgLocation);
+  await Promise.all(
+    mapLocations(
+      unnecessaryDependencies(workspaces, focusPkgName),
+      async (location) => removeAllDependencies(join(tmp, location))
+    )
+  );
 
-  await Promise.all([
-    removeWorkspacesDevDependencies(tmp, workspaces, pkgLocation, {
-      production,
-    }),
-    removeAllDependencies(tmp),
-  ]);
+  await Promise.all(
+    mapLocations(workspaces, async (location) => {
+      if (location === pkgLocation) {
+        if (!production) return;
+        // remove focus workspace devDependencies too
+      }
+      await removeKeys(join(tmp, location), ["devDependencies"]);
+    })
+  );
 
   await yarnInstall(tmp);
 

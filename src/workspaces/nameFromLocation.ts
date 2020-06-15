@@ -1,14 +1,16 @@
 import assert from "assert";
+import Debug from "debug";
 import slash from "slash";
 
-import { debug } from "../workspaces";
 import { Workspace } from "./types";
 
-export function getFocusPackageNameFromLocation(
+const debug = Debug("yarn-workspace-focus-install:workspace:nameFromLocation");
+
+export function nameFromLocation(
   workspaces: Record<string, Workspace>,
   focusLocation: string
 ): string {
-  debug("getFocusPackageNameFromLocation", { focusLocation, workspaces });
+  debug({ focusLocation, workspaces });
   const unixFocusLocation = slash(focusLocation);
   const [name] =
     Object.entries(workspaces).find(

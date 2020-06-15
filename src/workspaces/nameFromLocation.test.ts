@@ -1,6 +1,6 @@
 import { AssertionError } from "assert";
 
-import { getFocusPackageNameFromLocation } from "./getPackageNameFromLocation";
+import { nameFromLocation } from "./nameFromLocation";
 
 test("returns the mathing workspace name location", () => {
   const workspaces = {
@@ -13,22 +13,22 @@ test("returns the mathing workspace name location", () => {
       workspaceDependencies: [],
     },
   };
-  expect(getFocusPackageNameFromLocation(workspaces, "root/foo")).toBe("foo");
+  expect(nameFromLocation(workspaces, "root/foo")).toBe("foo");
 });
 
 test("throw if no math", () => {
-  expect(() => getFocusPackageNameFromLocation({}, "root/foo")).toThrow();
+  expect(() => nameFromLocation({}, "root/foo")).toThrow();
 });
 
 test("throw package not found from location", () => {
-  expect(() => getFocusPackageNameFromLocation({}, "foo")).toThrowError(
+  expect(() => nameFromLocation({}, "foo")).toThrowError(
     new AssertionError({ message: "foo is not in the workspace tree" })
   );
 });
 
 test("get focus package name from location", () => {
   expect(
-    getFocusPackageNameFromLocation(
+    nameFromLocation(
       {
         foo: {
           location: "packages/foo",
@@ -42,7 +42,7 @@ test("get focus package name from location", () => {
 
 test("get focus package name from location (windows like)", () => {
   expect(
-    getFocusPackageNameFromLocation(
+    nameFromLocation(
       {
         foo: {
           location: "packages/foo",

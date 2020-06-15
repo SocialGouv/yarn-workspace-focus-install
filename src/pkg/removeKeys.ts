@@ -2,7 +2,7 @@ import Debug from "debug";
 import { outputJson, readJson } from "fs-extra";
 import { join } from "path";
 
-const debug = Debug("yarn-workspace-focus-install:pkg");
+const debug = Debug("yarn-workspace-focus-install:pkg:removeKeys");
 export async function removeKeys(cwd: string, keys: string[]): Promise<void> {
   const packageFile = join(cwd, "package.json");
   debug({ cwd, keys, packageFile });
