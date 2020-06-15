@@ -1,5 +1,6 @@
 import assert from "assert";
 import { move, pathExistsSync, remove } from "fs-extra";
+import slash from "slash";
 
 import { removePackageJsonKeys } from "./pkg";
 import { uniqueUnion } from "./utils";
@@ -13,12 +14,13 @@ export function getFocusPackageNameFromLocation(
   workspaces: Record<string, Workspace>,
   focusLocation: string
 ): string {
+  const unixFocusLocation = slash(focusLocation);
   const [name] =
     Object.entries(workspaces).find(
-      ([, { location }]) => location === focusLocation
+      ([, { location }]) => location === unixFocusLocation
     ) ?? [];
 
-  assert(name, `${focusLocation} is not in the workspace tree`);
+  assert(name, `${unixFocusLocation} is not in the workspace tree`);
 
   return name;
 }

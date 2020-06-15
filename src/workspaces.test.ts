@@ -1,3 +1,5 @@
+import { AssertionError } from "assert";
+
 import {
   getFocusPackageNameFromLocation,
   listInternalWorkspaceDependencies,
@@ -93,4 +95,38 @@ test("list many internal dependencies", () => {
       "foo"
     )
   ).toEqual(new Set(["bar", "qoo", "qux", "quz"]));
+});
+
+test("throw package not found from location", () => {
+  expect(() => getFocusPackageNameFromLocation({}, "foo")).toThrowError(
+    new AssertionError({ message: "foo is not in the workspace tree" })
+  );
+});
+
+test("get focus package name from location", () => {
+  expect(
+    getFocusPackageNameFromLocation(
+      {
+        foo: {
+          location: "root/foo",
+          workspaceDependencies: [],
+        },
+      },
+      "root/foo"
+    )
+  ).toBe("foo");
+});
+
+test("get focus package name from location (windows like)", () => {
+  expect(
+    getFocusPackageNameFromLocation(
+      {
+        foo: {
+          location: "root/foo",
+          workspaceDependencies: [],
+        },
+      },
+      "root\\foo"
+    )
+  ).toBe("foo");
 });

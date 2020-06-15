@@ -8,6 +8,7 @@
     "execa": "^4.0.2",
     "find-yarn-workspace-root": "^2.0.0",
     "fs-extra": "^9.0.1",
+    "slash": "^3.0.0",
     "tempy": "^0.5.0",
     "yargs-parser": "^18.1.3"
   },
