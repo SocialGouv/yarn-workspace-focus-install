@@ -63,7 +63,7 @@ export async function focusInstall({
 
   if (dryRun) {
     console.info("[dryRun mode] Focus installation done in " + tmp);
-    return;
+    return Promise.resolve();
   }
 
   await removeAllNodeModules(workspaceRoot, workspaces);
