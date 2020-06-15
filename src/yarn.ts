@@ -1,6 +1,6 @@
 import execa, { ExecaReturnValue, Options } from "execa";
 
-import { Workspace } from "./workspaces";
+import { Workspace } from "./workspaces/types";
 
 export async function yarnInstall(
   cwd: string,
