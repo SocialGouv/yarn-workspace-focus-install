@@ -71,7 +71,7 @@ jobs:
         if: matrix.config.kind == 'test'
         run: yarn test
 
-      - name: Unit tests
+      - name: Unit tests and coverage
         if: matrix.config.kind == 'release'
         run: yarn test --coverage --coverageReporters=lcov --coverageReporters=text-summary
 
