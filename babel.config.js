@@ -9,6 +9,7 @@ module.exports = {
     ],
   ],
   plugins: [
+    ["@babel/plugin-syntax-nullish-coalescing-operator"],
     [
       "babel-plugin-module-resolver",
       {
