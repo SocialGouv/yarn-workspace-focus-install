@@ -28,9 +28,12 @@ test("should do nothing", async () => {
     stdout: yarnInstallLog,
   });
 
+  expect(await pathExists(join(cwd, "packages"))).toBeTruthy();
   expect(await pathExists(join(cwd, "packages", "dummy"))).toBeTruthy();
+
   expect(await pathExists(join(cwd, "node_modules"))).toBeTruthy();
   expect(await pathExists(join(cwd, "node_modules", "dummy"))).toBeTruthy();
+
   expect(await pathExists(join(cwd, "package.json"))).toBeTruthy();
   expect(await pathExists(join(cwd, "yarn.lock"))).toBeTruthy();
 });

@@ -27,7 +27,7 @@ test("should focus install foo package", async () => {
     stderr: "",
     stdout: yarnInstallLog,
   });
-  expect(await pathExists(join(cwd, "node_modules"))).toBeTruthy();
+  expect(await pathExists(join(cwd, "packages"))).toBeTruthy();
   expect(await pathExists(join(cwd, "packages", "a"))).toBeTruthy();
   expect(await pathExists(join(cwd, "packages", "b"))).toBeTruthy();
   expect(await pathExists(join(cwd, "packages", "c"))).toBeTruthy();
@@ -37,6 +37,7 @@ test("should focus install foo package", async () => {
   expect(await pathExists(join(cwd, "packages", "d"))).toBeTruthy();
   expect(await pathExists(join(cwd, "packages", "foo"))).toBeTruthy();
 
+  expect(await pathExists(join(cwd, "node_modules"))).toBeTruthy();
   expect(await pathExists(join(cwd, "node_modules", "a"))).toBeTruthy();
   // Sub package dev dependencies should not be installed
   expect(await pathExists(join(cwd, "node_modules", "through"))).toBeFalsy();
