@@ -1,4 +1,5 @@
 import { outputJson, readJSON } from "fs-extra";
+import { join } from "path";
 
 import { removeKeys } from "./removeKeys";
 
@@ -13,9 +14,12 @@ test.concurrent(
       winner: "winner",
     });
     (outputJson as jest.Mock).mockResolvedValueOnce({});
+    const file = join("foo/bar/package.json");
+
     await removeKeys("foo/bar", ["uncool", "looser"]);
-    expect(readJSON).toHaveBeenCalledWith("foo/bar/package.json");
-    expect(outputJson).toHaveBeenCalledWith("foo/bar/package.json", {
+
+    expect(readJSON).toHaveBeenCalledWith(file);
+    expect(outputJson).toHaveBeenCalledWith(file, {
       cool: "cool",
       winner: "winner",
     });
