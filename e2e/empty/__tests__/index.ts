@@ -7,7 +7,7 @@ import { bin } from "../../../package.json";
 
 const BIN = join(__dirname, "..", "..", "..", bin);
 const cwd = directory();
-const yarnInstallLog = readFileSync(join(__dirname, "/yarn-install.out"))
+const yarnInstallLog = readFileSync(join(__dirname, "yarn-install.out"))
   .toString("utf-8")
   .trim();
 afterAll(async () => {
@@ -29,7 +29,7 @@ test("should do nothing", async () => {
   });
 
   expect(existsSync(join(cwd, "node_modules"))).toBeTruthy();
-  expect(existsSync(join(cwd, "node_modules/dummy"))).toBeTruthy();
+  expect(existsSync(join(cwd, "node_modules", "dummy"))).toBeTruthy();
   expect(existsSync(join(cwd, "package.json"))).toBeTruthy();
   expect(existsSync(join(cwd, "yarn.lock"))).toBeTruthy();
 });
