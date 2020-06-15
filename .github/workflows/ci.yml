@@ -32,7 +32,7 @@ jobs:
             node-version: 14.x
             kind: release
 
-    name: ${{ matrix.config.kind }} ${{ matrix.config.os }}
+    name: ${{ matrix.config.kind }} on ${{ matrix.config.node-version }} (${{ matrix.config.os }})
     runs-on: ${{ matrix.config.os }}
 
     steps:
