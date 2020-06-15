@@ -1,10 +1,17 @@
 import { AssertionError } from "assert";
 
+import { removePackageJsonKeys } from "./pkg";
 import {
   getFocusPackageNameFromLocation,
   listInternalWorkspaceDependencies,
+  removeUnnecessaryWorkspaces,
 } from "./workspaces";
 
+jest.mock("./pkg");
+
+beforeEach(() => {
+  (removePackageJsonKeys as jest.Mock).mockReset();
+});
 test("returns the mathing workspace name location", () => {
   const workspaces = {
     bar: {
@@ -108,11 +115,11 @@ test("get focus package name from location", () => {
     getFocusPackageNameFromLocation(
       {
         foo: {
-          location: "root/foo",
+          location: "packages/foo",
           workspaceDependencies: [],
         },
       },
-      "root/foo"
+      "packages/foo"
     )
   ).toBe("foo");
 });
@@ -122,11 +129,50 @@ test("get focus package name from location (windows like)", () => {
     getFocusPackageNameFromLocation(
       {
         foo: {
-          location: "root/foo",
+          location: "packages/foo",
           workspaceDependencies: [],
         },
       },
-      "root\\foo"
+      "packages\\foo"
     )
   ).toBe("foo");
+});
+
+test("shouldn't remove self dependencies", async () => {
+  await removeUnnecessaryWorkspaces(
+    "/root",
+    {
+      foo: {
+        location: "packages/foo",
+        workspaceDependencies: [],
+      },
+    },
+    "packages/foo"
+  );
+  expect(removePackageJsonKeys).not.toHaveBeenCalled();
+});
+
+test("removes unnecessary workspaces", async () => {
+  await removeUnnecessaryWorkspaces(
+    "/root",
+    {
+      bar: {
+        location: "packages/bar",
+        workspaceDependencies: [],
+      },
+      foo: {
+        location: "packages/foo",
+        workspaceDependencies: ["bar"],
+      },
+      lol: {
+        location: "packages/lol",
+        workspaceDependencies: [],
+      },
+    },
+    "packages/foo"
+  );
+  expect(removePackageJsonKeys).toHaveBeenCalledWith("/root/packages/lol", [
+    "dependencies",
+    "devDependencies",
+  ]);
 });

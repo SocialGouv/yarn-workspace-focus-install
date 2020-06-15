@@ -38,6 +38,15 @@ test("should focus install foo package", async () => {
   expect(await pathExists(join(cwd, "packages", "foo"))).toBeTruthy();
 
   expect(await pathExists(join(cwd, "node_modules"))).toBeTruthy();
+  // package dependencies should be installed
+  expect(
+    await pathExists(join(cwd, "node_modules", "remove-trailing-separator"))
+  ).toBeTruthy();
+  // package dev dependencies should be installed
+  expect(
+    await pathExists(join(cwd, "node_modules", "replace-ext"))
+  ).toBeTruthy();
+
   expect(await pathExists(join(cwd, "node_modules", "a"))).toBeTruthy();
   // Sub package dev dependencies should not be installed
   expect(await pathExists(join(cwd, "node_modules", "through"))).toBeFalsy();
