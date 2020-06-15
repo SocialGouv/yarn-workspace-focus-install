@@ -1,5 +1,5 @@
 import { node } from "execa";
-import { copy, existsSync, readFileSync, remove } from "fs-extra";
+import { copy, pathExists, readFileSync, remove } from "fs-extra";
 import { join } from "path";
 import { directory } from "tempy";
 
@@ -28,9 +28,9 @@ test("should do nothing", async () => {
     stdout: yarnInstallLog,
   });
 
-  expect(existsSync(join(cwd, "packages", "dummy"))).toBeTruthy();
-  expect(existsSync(join(cwd, "node_modules"))).toBeTruthy();
-  expect(existsSync(join(cwd, "node_modules", "dummy"))).toBeTruthy();
-  expect(existsSync(join(cwd, "package.json"))).toBeTruthy();
-  expect(existsSync(join(cwd, "yarn.lock"))).toBeTruthy();
+  expect(await pathExists(join(cwd, "packages", "dummy"))).toBeTruthy();
+  expect(await pathExists(join(cwd, "node_modules"))).toBeTruthy();
+  expect(await pathExists(join(cwd, "node_modules", "dummy"))).toBeTruthy();
+  expect(await pathExists(join(cwd, "package.json"))).toBeTruthy();
+  expect(await pathExists(join(cwd, "yarn.lock"))).toBeTruthy();
 });
