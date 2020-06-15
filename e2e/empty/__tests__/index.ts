@@ -28,6 +28,7 @@ test("should do nothing", async () => {
     stdout: yarnInstallLog,
   });
 
+  expect(existsSync(join(cwd, "packages", "dummy"))).toBeTruthy();
   expect(existsSync(join(cwd, "node_modules"))).toBeTruthy();
   expect(existsSync(join(cwd, "node_modules", "dummy"))).toBeTruthy();
   expect(existsSync(join(cwd, "package.json"))).toBeTruthy();
