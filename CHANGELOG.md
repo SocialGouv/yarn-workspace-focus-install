@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.0.1...v1.0.2) (2020-06-15)
+
+
+### Bug Fixes
+
+* **cli:** ensure to exit with 1 on error ([d57aedb](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/d57aedb7773c9933e987ad65507e8e4572c1bd7a))
+* do not remove focus dependencies ([45ddfaa](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/45ddfaa36d46308bc87dda62188a3f5c32098f26))
+* do not remove focus dependencies ([3376a91](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/3376a9194695f07fdcca8bd876bc4a82f60a54f3))
+
 ## [1.0.1](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.0.0...v1.0.1) (2020-06-15)
 
 
