@@ -49,15 +49,16 @@ export async function focusInstall({
     )
   );
 
-  await Promise.all(
-    mapLocations(workspaces, async (location) => {
+  await Promise.all([
+    ...mapLocations(workspaces, async (location) => {
       if (location === pkgLocation) {
         if (!production) return;
         // remove focus workspace devDependencies too
       }
       await removeKeys(join(tmp, location), ["devDependencies"]);
-    })
-  );
+    }),
+    removeAllDependencies(tmp),
+  ]);
 
   await yarnInstall(tmp);
 

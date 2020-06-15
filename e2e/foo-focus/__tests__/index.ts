@@ -73,4 +73,8 @@ test("should focus install foo package", async () => {
 
   expect(await pathExists(join(cwd, "package.json"))).toBeTruthy();
   expect(await pathExists(join(cwd, "yarn.lock"))).toBeTruthy();
+  // Workspace dependencies should not be installed
+  expect(await pathExists(join(cwd, "node_modules", "base64-js"))).toBeFalsy();
+  // Workspace dev dependencies should not be installed
+  expect(await pathExists(join(cwd, "node_modules", "type"))).toBeFalsy();
 }, 10_000);

@@ -1,5 +1,11 @@
 {
   "private": true,
+  "dependencies": {
+    "base64-js": "latest"
+  },
+  "devDependencies": {
+    "type": "latest"
+  },
   "workspaces": [
     "packages/*"
   ]
