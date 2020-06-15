@@ -16,7 +16,7 @@ afterAll(async () => {
 test("should do nothing", async () => {
   await copy(join(__dirname, ".."), cwd);
   const { stdout, stderr } = await node(BIN, {
-    cwd: join(cwd, "packages/dummy"),
+    cwd: join(cwd, "packages", "dummy"),
     env: {
       /* eslint-disable @typescript-eslint/naming-convention */
       FORCE_COLOR: "0",
