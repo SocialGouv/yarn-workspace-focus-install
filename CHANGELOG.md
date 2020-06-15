@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.0.2...v1.0.3) (2020-06-15)
+
+
+### Bug Fixes
+
+* remove all workspace dependencies too ([3c8f7fc](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/3c8f7fc81c58785cfd5c775afdf1765d3f1fce95))
+
 ## [1.0.2](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.0.1...v1.0.2) (2020-06-15)
 
 
