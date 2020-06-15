@@ -1,6 +1,7 @@
 import assert from "assert";
 import Debug from "debug";
 import { move, pathExistsSync, remove } from "fs-extra";
+import { join } from "path";
 import slash from "slash";
 
 import { removePackageJsonKeys } from "./pkg";
@@ -75,7 +76,7 @@ export async function removeUnnecessaryWorkspaces(
       .filter(([packageName]) => focusPkgName !== packageName)
       .filter(([packageName]) => !internalDeps.has(packageName))
       .map(async ([, { location }]) =>
-        removeAllDependencies(`${rootDir}/${location}`)
+        removeAllDependencies(join(rootDir, location))
       )
   );
 }
@@ -114,10 +115,11 @@ export async function removeAllNodeModules(
     workspaces,
   });
   return Promise.all([
-    remove(`${rootDir}/node_modules`),
-    ...Object.entries(workspaces).map(async ([, { location }]) =>
-      remove(`${rootDir}/${location}/node_modules`)
-    ),
+    remove(join(rootDir, "node_modules")),
+    ...Object.entries(workspaces).map(async ([, { location }]) => {
+      debug("remove ", join(rootDir, location, "node_modules"));
+      return remove(join(rootDir, location, "node_modules"));
+    }),
   ]);
 }
 
@@ -131,17 +133,20 @@ export async function transferAllNodeModules(
     tmp,
     workspaces,
   });
+  const moveFromTmpToRootDir = async (location: string) => {
+    const source = join(tmp, location);
+    const destination = join(rootDir, location);
+    debug("move from '%s' to '%s", source, destination);
+    return move(source, destination);
+  };
   return Promise.all([
-    move(`${tmp}/node_modules`, `${rootDir}/node_modules`),
+    moveFromTmpToRootDir("node_modules"),
     ...Object.entries(workspaces)
       .filter(([, { location }]) =>
-        pathExistsSync(`${tmp}/${location}/node_modules`)
+        pathExistsSync(join(tmp, location, "node_modules"))
       )
       .map(async ([, { location }]) =>
-        move(
-          `${tmp}/${location}/node_modules`,
-          `${rootDir}/${location}/node_modules`
-        )
+        moveFromTmpToRootDir(join(location, "node_modules"))
       ),
   ]);
 }

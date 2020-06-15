@@ -18,6 +18,7 @@ test("should focus install foo package", async () => {
   const { stdout, stderr } = await node(BIN, {
     cwd: join(cwd, "packages", "foo"),
     env: {
+      // DEBUG: "*",
       /* eslint-disable @typescript-eslint/naming-convention */
       FORCE_COLOR: "0",
     },
