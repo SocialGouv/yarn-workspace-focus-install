@@ -1,0 +1,8 @@
+{
+  "name": "c2",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "c21": "0.0.0"
+  }
+}

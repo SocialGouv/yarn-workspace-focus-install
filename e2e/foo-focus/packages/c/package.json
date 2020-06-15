@@ -1,0 +1,9 @@
+{
+  "name": "c",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "c1": "0.0.0",
+    "c2": "0.0.0"
+  }
+}

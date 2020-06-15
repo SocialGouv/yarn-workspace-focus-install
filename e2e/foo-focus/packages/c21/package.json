@@ -1,0 +1,8 @@
+{
+  "name": "c21",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "signal-exit": "latest"
+  }
+}

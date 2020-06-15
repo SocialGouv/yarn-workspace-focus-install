@@ -7,7 +7,6 @@ overrides:
     extends:
       - "@socialgouv/eslint-config-typescript"
     rules:
-      import/no-unresolved:
-        - error
-        - ignore:
-            - "^@socialgouv/kosko-charts/"
+      "@typescript-eslint/no-invalid-void-type": off
+      "import/named": off
+      "import/default": off
