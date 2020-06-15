@@ -1,12 +1,5 @@
 import { node } from "execa";
-import {
-  copy,
-  existsSync,
-  pathExists,
-  readFileSync,
-  readJSON,
-  remove,
-} from "fs-extra";
+import { copy, pathExists, readFileSync, remove } from "fs-extra";
 import { join } from "path";
 import { directory } from "tempy";
 
