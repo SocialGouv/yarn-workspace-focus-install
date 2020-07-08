@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.0.4...v1.1.0) (2020-07-08)
+
+
+### Bug Fixes
+
+* ensure to no change the lock ([5713f1f](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/5713f1fff1699bae6be6dd59539d609d558ffac5))
+
+
+### Features
+
+* pass yarn args after -- ([02bc3e3](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/02bc3e34e4a883c8587f4c3d5f7c95ddf0c16bfe))
+
 ## [1.0.4](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.0.3...v1.0.4) (2020-07-07)
 
 
