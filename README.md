@@ -40,9 +40,9 @@ $ npx yarn-workspace-focus-install --cwd packages/foo
 
 ## Installation
 
-```
+```sh
 $ yarn add -D yarn-workspace-focus-install
-$ npx yarn-workspace-focus-install
+$ npx yarn-workspace-focus-install --cwd packages/foo
 ```
 
 <br>
@@ -52,9 +52,16 @@ $ npx yarn-workspace-focus-install
 
 ## Usage
 
-```
+```sh
 $ yarn add -D yarn-workspace-focus-install
-$ npx yarn-workspace-focus-install
+# Focus install packages/foo
+$ npx yarn-workspace-focus-install --cwd packages/foo
+# Focus install packages/foo without its devDependencies
+$ npx yarn-workspace-focus-install --cwd packages/foo --production
+# Fake focus install packages/foo
+$ npx yarn-workspace-focus-install --cwd packages/foo --dry-run
+# Focus install packages/foo pass `--cache-folder /dev/shm/yarn` to yarn
+$ npx yarn-workspace-focus-install --cwd packages/foo -- --cache-folder /dev/shm/yarn
 ```
 
 <br>

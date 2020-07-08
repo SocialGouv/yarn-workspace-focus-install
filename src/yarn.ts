@@ -1,12 +1,21 @@
+import Debug from "debug";
 import execa, { ExecaReturnValue, Options } from "execa";
 
 import { Workspace } from "./workspaces/types";
 
+export const debug = Debug("yarn-workspace-focus-install:yarn");
+
 export async function yarnInstall(
   cwd: string,
-  options: Options = {}
+  options: Options = {},
+  yarnArgs: string[] = ["--frozen-lockfile", "--prefer-offline"]
 ): Promise<ExecaReturnValue> {
-  return execa("yarn", ["--frozen-lockfile", "--prefer-offline"], {
+  debug("yarn", [...yarnArgs], {
+    cwd: cwd,
+    stdio: "inherit",
+    ...options,
+  });
+  return execa("yarn", [...yarnArgs], {
     cwd: cwd,
     stdio: "inherit",
     ...options,

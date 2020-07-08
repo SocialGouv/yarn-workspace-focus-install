@@ -25,8 +25,9 @@ export async function focusInstall({
   cwd = process.cwd(),
   production = false,
   dryRun = false,
+  yarnArgs = [] as string[],
 }): Promise<void> {
-  debug({ cwd, dryRun, production });
+  debug({ cwd, dryRun, production, yarnArgs });
 
   // Guard
   assert(cwd, "cwd should be defined");
@@ -60,7 +61,7 @@ export async function focusInstall({
     removeAllDependencies(tmp),
   ]);
 
-  await yarnInstall(tmp);
+  await yarnInstall(tmp, { cwd: tmp }, yarnArgs);
 
   if (dryRun) {
     console.info("[dryRun mode] Focus installation done in " + tmp);
