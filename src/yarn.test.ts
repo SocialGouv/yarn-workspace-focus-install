@@ -37,7 +37,7 @@ test("should call yarn command with --cache-folder /dev/shm/yarn", async () => {
 
   expect(execa).toHaveBeenCalledWith(
     "yarn",
-    ["--cache-folder", "/dev/shm/yarn"],
+    ["--frozen-lockfile", "--cache-folder", "/dev/shm/yarn"],
     { cwd, stdio: "inherit" }
   );
 });

@@ -61,7 +61,7 @@ export async function focusInstall({
     removeAllDependencies(tmp),
   ]);
 
-  await yarnInstall(tmp, { cwd: tmp }, yarnArgs);
+  await yarnInstall(tmp, {}, yarnArgs);
 
   if (dryRun) {
     console.info("[dryRun mode] Focus installation done in " + tmp);

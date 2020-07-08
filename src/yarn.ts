@@ -8,14 +8,14 @@ export const debug = Debug("yarn-workspace-focus-install:yarn");
 export async function yarnInstall(
   cwd: string,
   options: Options = {},
-  yarnArgs: string[] = ["--frozen-lockfile", "--prefer-offline"]
+  yarnArgs: string[] = ["--prefer-offline"]
 ): Promise<ExecaReturnValue> {
   debug("yarn", [...yarnArgs], {
     cwd: cwd,
     stdio: "inherit",
     ...options,
   });
-  return execa("yarn", [...yarnArgs], {
+  return execa("yarn", ["--frozen-lockfile", ...yarnArgs], {
     cwd: cwd,
     stdio: "inherit",
     ...options,
