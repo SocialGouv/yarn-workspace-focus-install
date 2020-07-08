@@ -25,7 +25,12 @@ export async function focusInstall({
   cwd = process.cwd(),
   production = false,
   dryRun = false,
-  yarnArgs = [] as string[],
+  yarnArgs = [],
+}: {
+  cwd?: string;
+  production?: boolean;
+  dryRun?: boolean;
+  yarnArgs?: string[];
 }): Promise<void> {
   debug({ cwd, dryRun, production, yarnArgs });
 

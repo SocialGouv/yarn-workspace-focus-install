@@ -3,7 +3,7 @@ import execa, { ExecaReturnValue, Options } from "execa";
 
 import { Workspace } from "./workspaces/types";
 
-export const debug = Debug("yarn-workspace-focus-install:yarn");
+const debug = Debug("yarn-workspace-focus-install:yarn");
 
 export async function yarnInstall(
   cwd: string,

@@ -10,3 +10,4 @@ overrides:
       "@typescript-eslint/no-invalid-void-type": off
       "import/named": off
       "import/default": off
+      "import/no-named-as-default": off

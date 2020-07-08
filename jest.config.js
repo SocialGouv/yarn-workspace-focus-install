@@ -9,11 +9,11 @@ const ignorePatterns = [
 ];
 
 module.exports = {
+  collectCoverageFrom: ["src/**/*.ts"],
   moduleDirectories: ["src", ...defaults.moduleDirectories],
   moduleNameMapper: {
     "^@socialgouv/kosko-charts(.*)$": "<rootDir>/src$1",
   },
-  collectCoverageFrom: ["src/**/*.ts"],
   testEnvironment: "node",
   testPathIgnorePatterns: [
     ...defaults.testPathIgnorePatterns,
