@@ -1111,10 +1111,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/eslint-config-recommended@^1.24.0":
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-1.24.0.tgz#12a38184ca24ffc89a20e013ff65e36d6778ac3e"
-  integrity sha512-AoItigV2rNjw7FY3mN7H6vGDX765nDQrSLWDwtg2ewjv8A2loAtvZA55fmEsu96JuMsi6HZwB3DLow8q9NG7VA==
+"@socialgouv/eslint-config-recommended@^1.25.0":
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-1.25.0.tgz#4b7b6d82334b4140b98aea0afa6eb331fe081804"
+  integrity sha512-WuFCQb9ScYmMJiolPC0EVjXONFKnvAeSRJe1hZdNoaERhkKXWxRSQzd4Maz8K9uXwOPdJ98XX3d2KUKRk1+dyA==
   dependencies:
     eslint-config-prettier "~6.11.0"
     eslint-plugin-import "~2.22.0"
@@ -1123,15 +1123,15 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/eslint-config-typescript@^1.24.0":
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-typescript/-/eslint-config-typescript-1.24.0.tgz#338a50ec87b8e23da57ebeb668369744dffb952f"
-  integrity sha512-C9/tykhVSNu90owbL+IYJQLyG/ZFl2orsM87TJJfmD7w/FlEuQDhxTCth6Hgqx0BNwDkzDoyRg2Gcr2JZna3tQ==
+"@socialgouv/eslint-config-typescript@^1.25.0":
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-typescript/-/eslint-config-typescript-1.25.0.tgz#bddf11ad1492cfcf9925c013e821c09fa3c6a7a8"
+  integrity sha512-tZf1swRJ85VhjFxfwNjqCLf3HyQabLnOOwMn5VhXSqFAitVWeLYIm/mY4OPBN4rs5iEAMI2EBJslk/QpseiisA==
   dependencies:
-    "@socialgouv/eslint-config-recommended" "^1.24.0"
+    "@socialgouv/eslint-config-recommended" "^1.25.0"
     "@typescript-eslint/eslint-plugin" "~3.9.0"
     "@typescript-eslint/parser" "~3.9.0"
-    eslint-import-resolver-typescript "~2.2.0"
+    eslint-import-resolver-typescript "~2.2.1"
     eslint-plugin-import "~2.22.0"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
@@ -2233,7 +2233,7 @@ eslint-import-resolver-node@^0.3.3:
     debug "^2.6.9"
     resolve "^1.13.1"
 
-eslint-import-resolver-typescript@^2.2.1, eslint-import-resolver-typescript@~2.2.0:
+eslint-import-resolver-typescript@^2.2.1, eslint-import-resolver-typescript@~2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.2.1.tgz#4b9bdfb51af7e14947ebc40ffdd6c32d5924b905"
   integrity sha512-wxlVdwuWY6R5+CoesIy6n8EZX4k9lEeZGWTVBoX9g//8Xma8JMtL/p3AGnG43rRyXmIrX+/0IN8lpOPzrw1fSw==
