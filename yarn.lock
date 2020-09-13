@@ -1146,10 +1146,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/eslint-config-recommended@^1.30.0":
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-1.30.0.tgz#443b52b1899e86b26cbe0baf36c8cc943134b095"
-  integrity sha512-nEXd3Q9MZQRCKK7f4yKOEpij81o6LW/+6x4Lb10TIDQduDQqqlzkTSyOQ5VvXX/a8k82mgvS1uqwX/oe9+Mpxg==
+"@socialgouv/eslint-config-recommended@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-1.31.0.tgz#0ebef9ec9de3a5b63855ba6cb2aa64dbacb223e1"
+  integrity sha512-7Y0fnEfC7+kw+As+QkBHnxmr9P3g6NHczlr+4JT58Gm3YcwUrMSHTDOG8cYgWSnvvKmXMNYmhypv/9z8AXj5Zg==
   dependencies:
     eslint-config-prettier "~6.11.0"
     eslint-plugin-import "~2.22.0"
@@ -1158,12 +1158,12 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/eslint-config-typescript@^1.30.0":
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-typescript/-/eslint-config-typescript-1.30.0.tgz#f9404706fc61605f6dac7373c5a442c410ff0ed6"
-  integrity sha512-Gyz7wSV85WYJaZTqAPHbfzPrmgs6vENrNIZywKXMxckMWbZreBXPLUV/SLWiWpanCTFrZDpKa7ab85iTrYChhg==
+"@socialgouv/eslint-config-typescript@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-typescript/-/eslint-config-typescript-1.31.0.tgz#6f0eb6792913ef34f5c625cf56d68cc40d0d85cb"
+  integrity sha512-fXjQBjjOxVozjFY16Mz7pvICPAPKS0ivu+Qh+L5HSfQ0dfQgrVHTAEag8tBj6CtVfndLRO2XXyFu+94OnIRErg==
   dependencies:
-    "@socialgouv/eslint-config-recommended" "^1.30.0"
+    "@socialgouv/eslint-config-recommended" "^1.31.0"
     "@typescript-eslint/eslint-plugin" "~3.10.1"
     "@typescript-eslint/parser" "~3.10.1"
     eslint-import-resolver-typescript "~2.3.0"
