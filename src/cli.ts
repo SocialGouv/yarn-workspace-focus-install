@@ -2,8 +2,7 @@ import parser from "yargs-parser";
 
 import { focusInstall } from "./install";
 
-const { cwd, dryRun, production, _: args } = parser(process.argv.slice(2));
-const yarnArgs = args as string[];
+const { cwd, dryRun, production, _: yarnArgs } = parser(process.argv.slice(2));
 
 focusInstall({ cwd, dryRun, production, yarnArgs }).catch((e) => {
   console.error(e);
