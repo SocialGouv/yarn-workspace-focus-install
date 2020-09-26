@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.8...v1.1.9) (2020-09-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tempy to ^0.7.1 ([#127](https://github.com/SocialGouv/yarn-workspace-focus-install/issues/127)) ([d702c95](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/d702c95446b85721b1f5fba66c76c4c6240484e3))
+
 ## [1.1.8](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.7...v1.1.8) (2020-09-21)
 
 
