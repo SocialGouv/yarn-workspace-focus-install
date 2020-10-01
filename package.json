@@ -12,7 +12,7 @@
     "slash": "^3.0.0",
     "tempy": "^0.7.1",
     "tslib": "^2.0.1",
-    "yargs-parser": "^20.2.0"
+    "yargs-parser": "^20.2.1"
   },
   "bin": "./bin/yarn-workspace-focus-install.js",
   "devDependencies": {
