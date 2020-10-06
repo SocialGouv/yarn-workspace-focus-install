@@ -1,7 +1,7 @@
 {
   "name": "@socialgouv/yarn-workspace-focus-install",
   "description": "Install one and only workspace",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "author": "Fabrique numérique des Ministères Sociaux <dsi-incubateur@sg.social.gouv.fr> (https://incubateur.social.gouv.fr)",
   "bugs": "https://github.com/SocialGouv/yarn-workspace-focus-install/issues",
   "dependencies": {
