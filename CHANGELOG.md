@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.11...v1.1.12) (2020-10-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tslib to ^2.0.3 ([#146](https://github.com/SocialGouv/yarn-workspace-focus-install/issues/146)) ([2149fb0](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/2149fb084c325f686a69f6fe073333ada77492f1))
+
 ## [1.1.11](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.10...v1.1.11) (2020-10-06)
 
 
