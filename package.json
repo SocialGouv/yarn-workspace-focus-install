@@ -10,7 +10,7 @@
     "find-yarn-workspace-root": "^2.0.0",
     "fs-extra": "^9.0.1",
     "slash": "^3.0.0",
-    "tempy": "^0.7.1",
+    "tempy": "^1.0.0",
     "tslib": "^2.0.3",
     "yargs-parser": "^20.2.1"
   },
