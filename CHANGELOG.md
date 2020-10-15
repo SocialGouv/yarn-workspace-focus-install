@@ -1,3 +1,10 @@
+## [1.1.14](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.13...v1.1.14) (2020-10-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency yargs-parser to ^20.2.2 ([#151](https://github.com/SocialGouv/yarn-workspace-focus-install/issues/151)) ([e383db2](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/e383db27648635aacee5bcb7c5e5fda95908e7a9))
+
 ## [1.1.13](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.12...v1.1.13) (2020-10-12)
 
 
