@@ -2,7 +2,7 @@ import assert from "assert";
 import Debug from "debug";
 import slash from "slash";
 
-import { Workspace } from "./types";
+import type { Workspace } from "./types";
 
 const debug = Debug("yarn-workspace-focus-install:workspace:nameFromLocation");
 

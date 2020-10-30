@@ -1,7 +1,8 @@
 import Debug from "debug";
-import execa, { ExecaReturnValue, Options } from "execa";
+import type { ExecaReturnValue, Options } from "execa";
+import execa from "execa";
 
-import { Workspace } from "./workspaces/types";
+import type { Workspace } from "./workspaces/types";
 
 const debug = Debug("yarn-workspace-focus-install:yarn");
 

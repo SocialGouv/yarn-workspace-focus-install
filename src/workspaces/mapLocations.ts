@@ -1,4 +1,4 @@
-import { Workspace } from "./types";
+import type { Workspace } from "./types";
 
 export function mapLocations<T>(
   workspaces: Record<string, Workspace>,

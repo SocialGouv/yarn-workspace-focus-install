@@ -2,7 +2,7 @@ import Debug from "debug";
 import { move, pathExistsSync, remove } from "fs-extra";
 import { join } from "path";
 
-import { Workspace } from "./workspaces/types";
+import type { Workspace } from "./workspaces/types";
 
 export const debug = Debug("yarn-workspace-focus-install:workspace");
 export async function removeAllNodeModules(

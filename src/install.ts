@@ -15,7 +15,7 @@ import { removeKeys } from "./pkg/removeKeys";
 import { removeAllNodeModules, transferAllNodeModules } from "./workspaces";
 import { mapLocations } from "./workspaces/mapLocations";
 import { nameFromLocation } from "./workspaces/nameFromLocation";
-import { Workspace } from "./workspaces/types";
+import type { Workspace } from "./workspaces/types";
 import { unnecessaryDependencies } from "./workspaces/unnecessaryDependencies";
 import { getWorkspaces, yarnInstall } from "./yarn";
 
