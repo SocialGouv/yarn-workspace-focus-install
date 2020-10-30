@@ -2,7 +2,7 @@ import { ok } from "assert";
 import Debug from "debug";
 
 import { listDependencies } from "./listDependencies";
-import { Workspace } from "./types";
+import type { Workspace } from "./types";
 
 const debug = Debug(
   "yarn-workspace-focus-install:workspaces:unnecessaryDependencies"

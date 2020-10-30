@@ -1,7 +1,7 @@
 import Debug from "debug";
 
 import { uniqueUnion } from "../utils";
-import { Workspace } from "./types";
+import type { Workspace } from "./types";
 
 const debug = Debug("yarn-workspace-focus-install:workspace:listDependencies");
 
