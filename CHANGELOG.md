@@ -1,3 +1,10 @@
+## [1.1.19](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.18...v1.1.19) (2020-11-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency debug to ^4.3.1 ([#187](https://github.com/SocialGouv/yarn-workspace-focus-install/issues/187)) ([e889941](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/e88994148a1c8ebf22c5fe931b25b7be44ba3a77))
+
 ## [1.1.18](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.17...v1.1.18) (2020-11-19)
 
 
