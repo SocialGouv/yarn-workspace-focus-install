@@ -6,7 +6,7 @@
   "bugs": "https://github.com/SocialGouv/yarn-workspace-focus-install/issues",
   "dependencies": {
     "debug": "^4.3.1",
-    "execa": "^4.1.0",
+    "execa": "^5.0.0",
     "find-yarn-workspace-root": "^2.0.0",
     "fs-extra": "^9.1.0",
     "slash": "^3.0.0",
