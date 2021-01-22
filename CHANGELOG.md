@@ -1,3 +1,10 @@
+## [1.1.22](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.21...v1.1.22) (2021-01-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([#232](https://github.com/SocialGouv/yarn-workspace-focus-install/issues/232)) ([0f2792d](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/0f2792d3cf86e27cfc1b5031ea7196beaf633820))
+
 ## [1.1.21](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.20...v1.1.21) (2021-01-19)
 
 
