@@ -1,6 +1,13 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>SocialGouv/renovate-config",
     ":automergeAll"
+  ],
+  "packageRules": [
+    {
+      "paths": ["e2e"],
+      "ignoreDeps": ["a", "b", "c", "c1", "c2", "c21"]
+    }
   ]
 }
