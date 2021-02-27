@@ -1086,21 +1086,21 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@kosko/env@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@kosko/env/-/env-1.0.3.tgz#3615add577b2eb4af060474886f32d1c4e797f01"
-  integrity sha512-hN8WsB+Mpu9TctXBrWfMAJx2G31/1RK3Eq3VcHMHup7jb+AV10rJw1EaRhjwMzechMlXYoK+HeYtYTym/kbP4A==
+"@kosko/env@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@kosko/env/-/env-1.0.4.tgz#bdfcacc28edaa820bdea3ff2be1efca62b72f2b4"
+  integrity sha512-icuHfWNzesxMUW2RPY9ktNjsh6kZ+0TPMce2/ZRj4KHVS2m/mIsmYuJL8wmYuWTPQwq2SNVhnKoZiVAgYcXxaA==
   dependencies:
-    "@kosko/require" "^1.0.3"
+    "@kosko/require" "^1.0.4"
     debug "^4.3.1"
     deepmerge "^4.2.2"
     is-plain-object "^5.0.0"
     tslib "^2.1.0"
 
-"@kosko/require@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@kosko/require/-/require-1.0.3.tgz#ff58173664110b8b204f938bfade83108385e485"
-  integrity sha512-ZW9C9qoxj0pxzHsR8tnL2lsx2D1wqn3KCk81e8Z9xrF5Bo56pJqm5pvv1cOhRL2dp7j3aQDWQ1aSOmUo878zSg==
+"@kosko/require@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@kosko/require/-/require-1.0.4.tgz#9ce21bac090fa38f1b5b088773e4b360b479eeb2"
+  integrity sha512-naf2r24WiyW6cGKBc6SRUQI+T7rDZpD13JQj3MuYTizbCM1jSfH7o9z0fw5nfTjxnngi32/bHqlX+Fk/szn32Q==
   dependencies:
     resolve "^1.19.0"
     tslib "^2.1.0"
