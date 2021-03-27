@@ -28,7 +28,7 @@
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
     "babel-plugin-module-resolver": "^4.1.0",
-    "eslint": "^7.22.0",
+    "eslint": "^7.23.0",
     "eslint-import-resolver-typescript": "^2.4.0",
     "husky": "^5.2.0",
     "jest": "^26.6.3",
