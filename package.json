@@ -24,7 +24,7 @@
     "@socialgouv/eslint-config-recommended": "^1.65.0",
     "@socialgouv/eslint-config-typescript": "^1.65.0",
     "@types/debug": "^4.1.5",
-    "@types/fs-extra": "^9.0.10",
+    "@types/fs-extra": "^9.0.11",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
     "babel-plugin-module-resolver": "^4.1.0",
