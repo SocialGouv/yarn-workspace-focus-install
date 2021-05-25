@@ -12,24 +12,24 @@ jobs:
       matrix:
         config:
           - os: ubuntu-latest
-            node-version: 14.x
+            node-version: 12.x
             kind: test
           - os: macOS-latest
-            node-version: 14.x
+            node-version: 12.x
             kind: test
           - os: windows-latest
-            node-version: 14.x
+            node-version: 12.x
             kind: test
           #
           - os: macOS-latest
-            node-version: 16.x
+            node-version: 14.x
             kind: test
           - os: windows-latest
-            node-version: 16.x
+            node-version: 14.x
             kind: test
           #
           - os: ubuntu-latest
-            node-version: 16.x
+            node-version: 14.x
             kind: release
 
     name: ${{ matrix.config.kind }} on ${{ matrix.config.node-version }} (${{ matrix.config.os }})
