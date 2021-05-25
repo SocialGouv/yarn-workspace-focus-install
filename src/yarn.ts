@@ -30,6 +30,6 @@ export async function getWorkspaces(): Promise<Record<string, Workspace>> {
     "--json",
     "info",
   ]);
-  const { data } = JSON.parse(stdout);
+  const { data }: { data: string } = JSON.parse(stdout);
   return JSON.parse(data) as Record<string, Workspace>;
 }
