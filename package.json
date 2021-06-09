@@ -16,10 +16,10 @@
   },
   "bin": "./bin/yarn-workspace-focus-install.js",
   "devDependencies": {
-    "@babel/core": "^7.14.3",
+    "@babel/core": "^7.14.5",
     "@babel/plugin-syntax-nullish-coalescing-operator": "^7.8.3",
-    "@babel/preset-env": "^7.14.4",
-    "@babel/preset-typescript": "^7.13.0",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
     "@kosko/env": "^2.0.1",
     "@socialgouv/eslint-config-recommended": "^1.75.0",
     "@socialgouv/eslint-config-typescript": "^1.75.0",
