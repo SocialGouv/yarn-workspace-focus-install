@@ -36,30 +36,13 @@ jobs:
     runs-on: ${{ matrix.config.os }}
 
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Set up Node.js ${{ matrix.config.node-version }}
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.config.node-version }}
-
-      - name: Get yarn cache directory path
-        id: init
-        shell: bash
-        run: |
-          echo "::set-output name=yarn_cache::$(yarn cache dir)"
-          #
-          echo "Node $(node --version)"
-          echo "Yarn $(yarn --version)"
-
-      - uses: actions/checkout@v2
-
-      - name: Cache Yarn packages
-        id: yarn_cache_packages
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.init.outputs.yarn_cache }}
-          key: ${{ matrix.config.os }}-${{ matrix.config.kind }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ matrix.config.os }}-${{ matrix.config.kind }}-
+          cache: yarn
 
       - name: Installing
         run: yarn --frozen-lockfile --perfer-offline
