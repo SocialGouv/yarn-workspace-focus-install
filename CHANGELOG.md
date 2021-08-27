@@ -1,3 +1,15 @@
+## [1.1.35](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.34...v1.1.35) (2021-08-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency slash to v4 ([#319](https://github.com/SocialGouv/yarn-workspace-focus-install/issues/319)) ([d974d0b](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/d974d0bacca41a545bf592a346ffd93a840f0f64))
+
+
+### Reverts
+
+* **deps:** update dependency slash to v4 ([#399](https://github.com/SocialGouv/yarn-workspace-focus-install/issues/399)) ([1fc3119](https://github.com/SocialGouv/yarn-workspace-focus-install/commit/1fc31194bef67381d52d0569928b90157303676a))
+
 ## [1.1.34](https://github.com/SocialGouv/yarn-workspace-focus-install/compare/v1.1.33...v1.1.34) (2021-07-04)
 
 
