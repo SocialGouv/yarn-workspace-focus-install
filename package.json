@@ -9,7 +9,7 @@
     "execa": "^5.1.1",
     "find-yarn-workspace-root": "^2.0.0",
     "fs-extra": "^10.0.0",
-    "slash": "^4.0.0",
+    "slash": "^3.0.0",
     "tempy": "^1.0.1",
     "tslib": "^2.3.0",
     "yargs-parser": "^20.2.9"
