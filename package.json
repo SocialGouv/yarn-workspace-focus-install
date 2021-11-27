@@ -5,7 +5,7 @@
   "author": "Fabrique numérique des Ministères Sociaux <dsi-incubateur@sg.social.gouv.fr> (https://incubateur.social.gouv.fr)",
   "bugs": "https://github.com/SocialGouv/yarn-workspace-focus-install/issues",
   "dependencies": {
-    "debug": "^4.3.2",
+    "debug": "^4.3.3",
     "execa": "^5.1.1",
     "find-yarn-workspace-root": "^2.0.0",
     "fs-extra": "^10.0.0",
