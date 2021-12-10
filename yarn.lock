@@ -1141,23 +1141,23 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@kosko/env@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@kosko/env/-/env-2.0.1.tgz#b6b4ca0278a6b5633346afa13f9c58f8146e2da5"
-  integrity sha512-4XsKXKppgyrM35HwD1nAUWbb3wxCc89Aec6s+onSbiL4B7jesDI8n/pSQZEBbn5MePJh5O0DTEjCnIBEjzdCaQ==
+"@kosko/env@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@kosko/env/-/env-3.0.0.tgz#ff900f2f547143faaeff8c37719da9f9931a8918"
+  integrity sha512-lmyVRI+ObUIkotIl8tzVo0pzMk5/G7SRR25sZPdTK1drOWCAIW+3it2z2S8H36A/ysvLI3pNdVbUJWvCe0wVJA==
   dependencies:
-    "@kosko/require" "2.0.2"
-    debug "^4.3.1"
+    "@kosko/require" "3.0.0"
+    debug "^4.3.3"
     deepmerge "^4.2.2"
     is-plain-object "^5.0.0"
-    tslib "^2.1.0"
+    tslib "^2.3.1"
 
-"@kosko/require@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@kosko/require/-/require-2.0.2.tgz#fab0a4f7e77af93e673b274104c7df0742fb7d0d"
-  integrity sha512-pewGQxNtaj/piJYHbiV4jXXRVS+Hcz9wv0bVNwOL1lz1IqlKS20tsjvkuzENQG2MMX2cJq3JDQ3RYNPrN32Q3Q==
+"@kosko/require@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@kosko/require/-/require-3.0.0.tgz#4e946346c2e9201ba23b1bc6aa13f576618b185f"
+  integrity sha512-vOe5N63q680c7FwktHJLN9+JlJv0uBVR5M1i5B615MnwL3cl9j1xCq21g9W/K5roXKj+5V56HsclEBqD5tj+9g==
   dependencies:
-    resolve "^1.19.0"
+    resolve "^1.20.0"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -4106,7 +4106,7 @@ resolve.exports@^1.1.0:
   resolved "https://registry.yarnpkg.com/resolve.exports/-/resolve.exports-1.1.0.tgz#5ce842b94b05146c0e03076985d1d0e7e48c90c9"
   integrity sha512-J1l+Zxxp4XK3LUDZ9m60LRJF/mAe4z6a4xyabPHk7pvK5t35dACV32iIjJDFeWZFfZlO29w6SZ67knR0tHzJtQ==
 
-resolve@^1.13.1, resolve@^1.14.2, resolve@^1.19.0, resolve@^1.20.0:
+resolve@^1.13.1, resolve@^1.14.2, resolve@^1.20.0:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
   integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
@@ -4507,7 +4507,7 @@ tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.1.0, tslib@^2.3.1:
+tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
