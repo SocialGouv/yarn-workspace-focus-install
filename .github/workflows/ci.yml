@@ -36,7 +36,7 @@ jobs:
     runs-on: ${{ matrix.config.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - name: Set up Node.js ${{ matrix.config.node-version }}
         uses: actions/setup-node@v2
@@ -87,7 +87,7 @@ jobs:
         with:
           node-version: 14.x
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Download lib form build job
         uses: actions/download-artifact@v2
